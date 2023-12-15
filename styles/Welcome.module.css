@@ -1,0 +1,72 @@
+.welcome{
+    min-height: 100vh;
+    background-image: url(../public/images/welcome_background.png);
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.welcome_container {
+    text-align: center;
+    margin-top: 100px;
+  }
+
+  .welcome_container h1 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  
+    /* Création du gradient incluant la couleur blanche */
+    background: linear-gradient(to right, red, blue, white, red);
+    background-size: 300% auto; /* Augmenter la taille du background pour l'animation */
+    
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;  
+    /* Animation */
+    animation: moveGradient 10s linear infinite;
+  }
+  
+  /* Keyframes pour l'animation */
+  @keyframes moveGradient {
+    0% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+
+  .welcome_container img{
+    width: 200px;
+    height: 200px;
+    margin: auto;
+  }
+  
+  .login_options {
+    margin-top: 20px;
+  }
+  
+  .login_btn {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .google {
+    background-color: #db4437;
+    color: white;
+  }
+  
+  .icloud {
+    background-color: #007aff;
+    color: white;
+  }
+  
+  .email {
+    background-color: #6c757d;
+    color: white;
+  }
+  

@@ -1,0 +1,121 @@
+.header {
+  background-color: #007bff;
+  color: white;
+  z-index: 5;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
+  transition: box-shadow 0.3s ease-in-out; /* Smooth transition for the shadow */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+}
+
+.logo img {
+  width: 100px;
+  height: 100px;
+}
+.logo a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out; /* Smooth color transition on hover */
+}
+
+.logo a:hover {
+  color: #dfe6e9; /* Lightens the color on hover */
+}
+
+.menu_toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer; /* Changes cursor to pointer to indicate it's clickable */
+}
+
+.nav.active {
+}
+
+.nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  display: block;
+  transition: color 0.3s ease-in-out; /* Smooth color transition on hover */
+}
+
+.nav ul li a:hover {
+  color: #dfe6e9; /* Lightens the color on hover */
+}
+
+@media (max-width: 768px) {
+  .header {
+    z-index: 2; /* Ensuring the header is above the nav */
+  }
+
+  .menu_toggle {
+    display: block;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+  }
+
+  .nav {
+    position: absolute;
+    top: 100%; /* Positioned right below the header */
+    left: 0;
+    width: 100%;
+    background-color: #007bff;
+    transform: translateY(-200%); /* Start hidden above */
+    transition: transform 0.5s ease-in-out;
+    z-index: -1;
+    text-align: center;
+  }
+
+  .nav.active {
+    display: block; /* Show when active */
+    flex-direction: column;
+    transition: transform 0.5s ease-in-out;
+    transform: translateY(0); /* Slide down into view */
+    text-align: center;
+  }
+
+  .nav ul {
+    padding: 1rem; /* Add some padding inside the nav */
+    display: block;
+    z-index: -2;
+
+  }
+
+  .nav ul li {
+    margin-bottom: 0.5rem; /* Space out the links a bit */
+  }
+
+  .nav ul li a {
+    color: white;
+    display: block;
+    padding: 0.5rem 1rem;
+
+  }
+
+  .nav ul li a:hover {
+    color: #dfe6e9;
+  }
+}
