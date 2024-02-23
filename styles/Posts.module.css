@@ -1,0 +1,39 @@
+.post_some_inner {
+    display: flex;
+    gap: 1rem;
+    background-color: black;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);}
+.post_some_inner h1{
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 2px black;
+
+}
+
+.post_some_inner textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    transition: all 0.3s ease;
+
+}
+
+.post_some_inner input::placeholder{
+    color: white;
+    font-weight: lighter;
+    letter-spacing: 1px;
+}
+
+ .profile_picture{
+
+    width: 2.5rem;
+    height: 2.5rem;
+    object-fit: cover;
+    border-radius: 50%;
+    border: solid white 2px;}

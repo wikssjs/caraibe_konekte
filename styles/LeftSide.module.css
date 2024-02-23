@@ -1,0 +1,173 @@
+.logo_image{
+  display: none;
+}
+
+.leftSide {
+  width: 35rem;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  background-color: #00224b;
+  gap: 1rem;
+  position: sticky;
+  left: 0;
+  top: 0;
+  overflow-y: scroll;
+  min-width: 5rem;
+}
+
+/* Personnalisation de la barre de défilement */
+.leftSide::-webkit-scrollbar {
+  width: 12px; /* Largeur de la barre de défilement */
+}
+
+/* Piste de la barre de défilement */
+.leftSide::-webkit-scrollbar-track {
+  background: #00224b; /* Couleur de fond de la piste */
+  border-radius: 10px; /* Arrondir les coins de la piste */
+}
+
+/* Poignée de la barre de défilement */
+.leftSide::-webkit-scrollbar-thumb {
+  background: #888; /* Couleur de la poignée */
+  border-radius: 10px; /* Arrondir les coins de la poignée */
+}
+
+/* Effet au survol sur la poignée de la barre de défilement */
+.leftSide::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Couleur de la poignée au survol */
+}
+
+.navigation {
+    border-bottom: solid white 2px;
+    border-style: dashed;
+    padding-bottom: 2rem;
+  }
+
+  
+  .profile {
+      height: 17rem;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      gap: 1rem;
+      text-align: center;
+      border-bottom: solid white 2px;
+      border-style: dashed;
+      padding-bottom: 2rem;
+    }
+    
+    .profile_informations {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .contact_section h1 {
+        font-weight: bold;
+      }
+
+      
+.liste_menu {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .liste_menu li {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+  
+  .one_contact {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .one_contact_info {
+    display: flex;
+    gap: 0.7rem;
+  }
+    
+    @media (max-width: 1200px) {
+    
+         /** Profile **/
+      .profile h1,
+      .profile p {
+        display: none;
+      }
+    
+      .profile .profile_informations {
+        flex-direction: column;
+        gap: 1rem;
+      }
+    
+      .profile {
+        height: 6rem;
+        padding: 0;
+        padding-top: 3rem;
+        margin: 0;
+      }
+    
+      .profile_picture {
+        width: 40px;
+      }
+      /* Personnalisation de la barre de défilement */
+      .leftSide::-webkit-scrollbar {
+        width: 5px; /* Largeur de la barre de défilement */
+      }
+
+      .logo_title{
+        display: none;
+      }
+
+      .logo_image{
+        display: block;
+      }
+    }
+
+    @media (max-width: 870px) {
+        /** Navigation **/
+        .navigation span {
+          display: none;
+        }
+      
+        .navigation svg {
+          width: 30px;
+          height: 30px;
+        }
+      
+        .liste_menu {
+          align-items: center;
+        }
+      }
+
+
+
+      @media (max-width: 990px) {
+        /** Contacts **/
+      
+        .contact_section {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+      
+        .contact_section h1 {
+          font-size: 0.7em;
+        }
+      
+        .contacts .one_contact_personnal_info,
+        .contacts .left_messageIcon {
+          display: none;
+        }
+    }
